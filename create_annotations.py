@@ -6,20 +6,19 @@ from pyproj import CRS, Transformer
 import json
 from os.path import exists
 
-def create_annotation(directory, file_name, id, output_file_name, url, iiif_image_api_version, output_csv, old_format=False):
+def create_annotation(file_name, input_proj4_string, id, output_file_name, url, iiif_image_api_version, output_csv, old_format=False):
     source = f"{url}/full/max/0/default.jpg"
-    # the proj string prior to the latest survey => should be updated!
-    crs = CRS.from_proj4("+proj=omerc +gamma=0.00047289 +lonc=2.33652588 +lon_0=2.33652588 +lat_0=48.83635612 +lat_ts=48.83635612 +x_0=0 +y_0=0 +to_meter=1.9490363 +no_defs +ellps=GRS80")
+    crs = CRS.from_proj4(input_proj4_string)
     crs_4326 = CRS.from_epsg(4326)
     transformer = Transformer.from_crs(crs, crs_4326)
-    # old format
+    # old QGIS gcp point format (no CRS and different pixel/source attribute)
     if old_format:
         imageX='pixelX'
         imageY='pixelY'
     else: 
         imageX='sourceX'
         imageY='sourceY'
-    csvFile = pandas.read_csv(directory + file_name,usecols=["mapX","mapY",imageX,imageY],comment='#',skip_blank_lines=True)
+    csvFile = pandas.read_csv(file_name,usecols=["mapX","mapY",imageX,imageY],comment='#',skip_blank_lines=True)
     features = []
     for index, row in csvFile.iterrows():
         (lat,lon) = transformer.transform(row['mapX'], row['mapY'])
@@ -123,19 +122,23 @@ def create_annotation(directory, file_name, id, output_file_name, url, iiif_imag
         "polygon": poly,
         "features": features
     }
+
+# TODO 
+# add parameters (source or more generic?)
+# a csv file with the correspondances between sheet_number, gcp point file and iiif id?
 def main():
     logging.basicConfig(level='DEBUG')
     entries = []
     source = 'bnf'
     output_directory = 'output'
+    # the proj string prior to the latest survey => should be updated!
+    verniquet_proj4_string = "+proj=omerc +gamma=0.00047289 +lonc=2.33652588 +lon_0=2.33652588 +lat_0=48.83635612 +lat_ts=48.83635612 +x_0=0 +y_0=0 +to_meter=1.9490363 +no_defs +ellps=GRS80"
     if source == 'rumsey':
-        #rumsey
         output_directory = 'output/rumsey'
         directory = 'gcps_rumsey/'
         for sheet_number in range(1, 73):
             file_name = '{}.jp2.points'.format(sheet_number+10110001)
             id = 'verniquet_rumsey_{}'.format(str(sheet_number).zfill(2))
-            #output_file_name = 'annotation_verniquet_rumsey/annotation_verniquet_rumsey_{}.json'.format(str(sheet_number).zfill(2))
             output_file_name = output_directory + '/{}/{}.json'.format(str(sheet_number).zfill(2),sheet_number+10110001)
             output_csv_file_name = output_directory + '/{}/{}.jp2.points'.format(str(sheet_number).zfill(2),sheet_number+10110001)
             sheetIdDf = pandas.read_csv('../uuids_verniquet_stanford.csv',usecols=["yaml_identifier"],skip_blank_lines=True)
@@ -145,7 +148,7 @@ def main():
                 logging.debug(f"  Skipping missing file: {directory + file_name}")
             else: 
                 logging.debug(f"  Creating annotation for file: {directory + file_name}")
-                entry = create_annotation(directory, file_name, id, output_file_name, url, iiif_image_api_version=3, output_csv=output_csv_file_name)
+                entry = create_annotation(directory + file_name, verniquet_proj4_string, id, output_file_name, url, iiif_image_api_version=3, output_csv=output_csv_file_name)
                 entries.append(entry)
         items = []
         for entry in entries:
@@ -193,28 +196,23 @@ def main():
             ],
             "items": items
         }
-        #output_file_name = 'annotation_verniquet_rumsey/annotation_verniquet_rumsey.json'
         output_file_name = output_directory + '/annotation_verniquet_rumsey.json'
         with open(output_file_name, 'w') as output_file:
             output_file.write(json.dumps(dictionary, indent=2))
     elif source == 'bnf':
         for sheet_number in range(1, 73):
-            #bnf
             output_directory = 'output/bnf'
             directory = 'gcps_bnf/'
             file_name = 'f{}.jpg.points'.format(sheet_number+2)
             id = 'verniquet_bnf_{}'.format(str(sheet_number).zfill(2))
-            #output_file_name = 'annotation_verniquet_bnf/annotation_verniquet_bnf_{}.json'.format(str(sheet_number).zfill(2))
             output_file_name = output_directory + '/{}/f{}.json'.format(str(sheet_number).zfill(2),sheet_number+2)
             output_csv_file_name = output_directory + '/{}/f{}.jpg.points'.format(str(sheet_number).zfill(2),sheet_number+2)
-            #url = 'https://iiif.geohistoricaldata.org/iiif/3/ATLAS_NATIONAL_DE_LA_VILLE_DE_PARIS_BNF_28.jpg'
-            #url = 'http://localhost:8000/12148/btv1b53243704g/f{}'.format(sheet_number+2)
             url = 'https://gallica.bnf.fr/iiif/ark:/12148/btv1b53243704g/f{}'.format(sheet_number+2)
             if not exists(directory + file_name):
                 logging.debug(f"  Skipping missing file: {directory + file_name}")
             else: 
                 logging.debug(f"  Creating annotation for file: {directory + file_name}")
-                entry = create_annotation(directory, file_name, id, output_file_name, url, iiif_image_api_version=1,output_csv=output_csv_file_name)
+                entry = create_annotation(directory + file_name, verniquet_proj4_string, id, output_file_name, url, iiif_image_api_version=1,output_csv=output_csv_file_name)
                 entries.append(entry)
         items = []
         for entry in entries:
@@ -261,7 +259,6 @@ def main():
             ],
             "items": items
         }
-        #output_file_name = 'annotation_verniquet_bnf/annotation_verniquet_bnf.json'
         output_file_name = output_directory + '/annotation_verniquet_bnf.json'
         with open(output_file_name, 'w') as output_file:
             output_file.write(json.dumps(dictionary, indent=2))
