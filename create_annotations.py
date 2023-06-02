@@ -5,8 +5,9 @@ import pandas
 from pyproj import CRS, Transformer
 import json
 from os.path import exists
+from osgeo import ogr
 
-def create_annotation(file_name, input_proj4_string, id, output_file_name, url, iiif_image_api_version, output_csv, old_format=False):
+def create_annotation(file_name, input_proj4_string, id, mask_file, output_file_name, url, iiif_image_api_version, output_csv, old_format=False):
     source = f"{url}/full/max/0/default.jpg"
     crs = CRS.from_proj4(input_proj4_string)
     crs_4326 = CRS.from_epsg(4326)
@@ -34,30 +35,60 @@ def create_annotation(file_name, input_proj4_string, id, output_file_name, url, 
                 "coordinates": [lon,lat]
             }
         })
-    minX = round(csvFile[imageX].min())
-    maxX = round(csvFile[imageX].max())
-    minY = -round(csvFile[imageY].max())
-    maxY = -round(csvFile[imageY].min())
+    poly = None
+    minX,maxX,minY,maxY=0,0,0,0
+    if mask_file:
+        conn = ogr.Open(mask_file)
+        lyr = conn.GetLayerByName( id )
+        print(id)
+        if lyr is None:
+            print('[ ERROR ]: layer name = "%s" could not be found in database "%s"' % ( id, mask_file ))
+        else:
+            feature = lyr.GetNextFeature()
+            print(feature)
+            geometry = feature.GetGeometryRef()
+            print(geometry.ExportToWkt())
+            (minX,maxX,minY,maxY) = geometry.GetEnvelope()
+            #invert Y values
+            minY, maxY = -maxY, -minY
+            #convert to int
+            minX,maxX,minY,maxY=int(minX),int(maxX),int(minY),int(maxY)
+            print("minX: %d, minY: %d, maxX: %d, maxY: %d" %(minX,minY,maxX,maxY))
+            ring = geometry.GetGeometryRef(0)
+            point_count = ring.GetPointCount()
+            points = []
+            for p in iter(range(point_count)):
+                lon, lat, _ = ring.GetPoint(p)
+                print(ring.GetPoint(p))
+                print("lon:%d lat:%d"%(lon, lat))
+                points.append(list((str(int(round(lon))),str(int(-round(lat))))))
+                print(points)
+            poly = ' '.join(list(map(','.join, points)))
+    if not poly:
+        minX = round(csvFile[imageX].min())
+        maxX = round(csvFile[imageX].max())
+        minY = -round(csvFile[imageY].max())
+        maxY = -round(csvFile[imageY].min())
 
-    map_minX = csvFile["mapX"].min()
-    map_maxX = csvFile["mapX"].max()
-    map_minY = csvFile["mapY"].min()
-    map_maxY = csvFile["mapY"].max()
+        map_minX = csvFile["mapX"].min()
+        map_maxX = csvFile["mapX"].max()
+        map_minY = csvFile["mapY"].min()
+        map_maxY = csvFile["mapY"].max()
 
-    def to_point(df):
-        round_df = df.filter(items=['sourceX', 'sourceY']).apply(round)
-        round_df['sourceY'] = round_df['sourceY'].apply(lambda x: -x)
-        return round_df.values.astype('int').astype(str).tolist()
-    
-    line = csvFile[csvFile["mapY"] == map_maxY].sort_values(by=["mapX"],ascending=False)
-    points = to_point(line)
-    line = csvFile[csvFile["mapX"] == map_minX].sort_values(by=["mapY"],ascending=False)
-    points.extend(to_point(line))
-    line = csvFile[csvFile["mapY"] == map_minY].sort_values(by=["mapX"],ascending=True)
-    points.extend(to_point(line))
-    line = csvFile[csvFile["mapX"] == map_maxX].sort_values(by=["mapY"],ascending=True)
-    points.extend(to_point(line))
-    poly = ' '.join(list(map(','.join, points)))
+        def to_point(df):
+            round_df = df.filter(items=['sourceX', 'sourceY']).apply(round)
+            round_df['sourceY'] = round_df['sourceY'].apply(lambda x: -x)
+            return round_df.values.astype('int').astype(str).tolist()
+        
+        line = csvFile[csvFile["mapY"] == map_maxY].sort_values(by=["mapX"],ascending=False)
+        points = to_point(line)
+        line = csvFile[csvFile["mapX"] == map_minX].sort_values(by=["mapY"],ascending=False)
+        points.extend(to_point(line))
+        line = csvFile[csvFile["mapY"] == map_minY].sort_values(by=["mapX"],ascending=True)
+        points.extend(to_point(line))
+        line = csvFile[csvFile["mapX"] == map_maxX].sort_values(by=["mapY"],ascending=True)
+        points.extend(to_point(line))
+        poly = ' '.join(list(map(','.join, points)))
     image_service_type = "ImageService1"
     if (iiif_image_api_version == 2):
         image_service_type = "ImageService1"
@@ -152,7 +183,7 @@ def main():
                 logging.debug(f"  Skipping missing file: {directory + file_name}")
             else: 
                 logging.debug(f"  Creating annotation for file: {directory + file_name}")
-                entry = create_annotation(directory + file_name, verniquet_proj4_string, id, output_file_name, url, iiif_image_api_version=3, output_csv=output_csv_file_name)
+                entry = create_annotation(directory + file_name, verniquet_proj4_string, id, None, output_file_name, url, iiif_image_api_version=3, output_csv=output_csv_file_name)
                 entries.append(entry)
         items = []
         for entry in entries:
@@ -216,7 +247,7 @@ def main():
                 logging.debug(f"  Skipping missing file: {directory + file_name}")
             else: 
                 logging.debug(f"  Creating annotation for file: {directory + file_name}")
-                entry = create_annotation(directory + file_name, verniquet_proj4_string, id, output_file_name, url, iiif_image_api_version=1,output_csv=output_csv_file_name)
+                entry = create_annotation(directory + file_name, verniquet_proj4_string, id, None, output_file_name, url, iiif_image_api_version=1,output_csv=output_csv_file_name)
                 entries.append(entry)
         items = []
         for entry in entries:
@@ -267,7 +298,8 @@ def main():
         with open(output_file_name, 'w') as output_file:
             output_file.write(json.dumps(dictionary, indent=2))
     elif source == 'bhdv':
-        for sheet_number in range(1, 16):
+        input_mask = 'masks.gpkg'
+        for sheet_number in range(1, 17):
             output_directory = 'output/bhdv'
             directory = 'atlas_municipal_1887/'
             file_name = 'planche_{}.points'.format(sheet_number)
@@ -278,7 +310,7 @@ def main():
                 logging.debug(f"  Skipping missing file: {directory + file_name}")
             else: 
                 logging.debug(f"  Creating annotation for file: {directory + file_name}")
-                entry = create_annotation(directory + file_name, atlas_municipal_proj4_string, id, output_file_name, url, iiif_image_api_version=3,output_csv=None)
+                entry = create_annotation(directory + file_name, atlas_municipal_proj4_string, id, directory+input_mask, output_file_name, url, iiif_image_api_version=3,output_csv=None)
                 entries.append(entry)
         items = []
         for entry in entries:
