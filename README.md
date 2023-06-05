@@ -18,3 +18,8 @@ from http://bibliotheques-specialisees.paris.fr/ark:/73873/pf0000935115
 ```shell
 python3 create_annotations.py bhdv_atlas_municipal_1887.csv 3 "+proj=omerc +gamma=0.00047289 +lonc=2.33652533 +lon_0=2.33652533 +lat_0=48.83635864 +lat_ts=48.83635864 +x_0=0 +y_0=0 +no_defs +ellps=GRS80" output/bhdv_atlas_municipal_1887/annotation_bhdv_atlas_municipal_1887.json ./bhdv_atlas_municipal_1887/masks.gpkg
 ```
+
+## Atlas municipal des vingt arrondissements de la ville de Paris dressé sous l'administration de M. E. Poubelle, préfet, sous la direction de M. Alphand,... par les soins de M. L. Fauve, géomètre en chef, avec le concours des géomètres du Plan de Paris... 1888
+```shell
+python3 create_annotations.py bhdv_atlas_municipal_1888.csv 3 "+proj=omerc +gamma=0.00047289 +lonc=2.33652533 +lon_0=2.33652533 +lat_0=48.83635864 +lat_ts=48.83635864 +x_0=0 +y_0=0 +no_defs +ellps=GRS80" output/bhdv_atlas_municipal_1888/annotation_bhdv_atlas_municipal_1888.json ./bhdv_atlas_municipal_1888/masks.gpkg
+```
