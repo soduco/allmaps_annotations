@@ -1,0 +1,220 @@
+{
+  "type": "AnnotationPage",
+  "@context": [
+    "http://www.w3.org/ns/anno.jsonld"
+  ],
+  "items": [
+    {
+      "type": "Annotation",
+      "id": "atlas_municipal_1886_bhdv_15",
+      "@context": [
+        "http://www.w3.org/ns/anno.jsonld",
+        "http://geojson.org/geojson-ld/geojson-context.jsonld",
+        "http://iiif.io/api/presentation/3/context.json"
+      ],
+      "motivation": "georeferencing",
+      "target": {
+        "type": "Image",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/BHdV_PL_ATL20Ardt_1886_0016.jpg/full/max/0/default.jpg",
+        "service": [
+          {
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/BHdV_PL_ATL20Ardt_1886_0016.jpg",
+            "type": "ImageService3"
+          }
+        ],
+        "selector": {
+          "type": "SvgSelector",
+          "value": "<svg width=\"8107\" height=\"7486\"><polygon points=\"1512,4529 1729,4147 1813,3979 1830,3876 1882,3739 1952,3502 2056,3189 2193,2690 2373,2024 2457,1868 2671,1667 2615,1609 2499,1176 2406,857 2395,656 2369,540 2364,435 3675,408 4539,403 5127,430 5436,406 6028,393 7063,396 7069,796 8405,796 9506,780 9513,1734 9516,2299 9520,2986 9529,4268 9533,5379 9534,6132 9016,6360 8764,6478 8554,6573 8059,6797 7401,6937 7271,6942 7121,6951 6816,6990 6804,7007 6261,6944 6180,6940 5922,6954 5810,7008 5645,7137 5570,7174 5337,7177 5173,7283 5007,7415 4604,7516 4138,7665 3835,7786 3595,7880 3568,7850 3267,7460 2755,6759 2464,6379 2426,6356 2399,6134 2393,5411 2394,5113 2310,4993 2242,4939 2198,4884 2168,4804 2094,4698 1427,4638 1512,4529\" /></svg>"
+        }
+      },
+      "body": {
+        "type": "FeatureCollection",
+        "purpose": "gcp-georeferencing",
+        "transformation": {
+          "type": "polynomial",
+          "options": {
+            "order": 2
+          }
+        },
+        "features": [
+          {
+            "type": "Feature",
+            "properties": {
+              "pixelCoords": [
+                1317,
+                677
+              ]
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2.3638037262709615,
+                48.89930091495305
+              ]
+            }
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "pixelCoords": [
+                3675,
+                638
+              ]
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2.3774427172499064,
+                48.899296843910676
+              ]
+            }
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "pixelCoords": [
+                6031,
+                623
+              ]
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2.391081704569805,
+                48.899291159849994
+              ]
+            }
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "pixelCoords": [
+                1325,
+                3035
+              ]
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2.3637987759733425,
+                48.890308732842534
+              ]
+            }
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "pixelCoords": [
+                3681,
+                3012
+              ]
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2.377435320992965,
+                48.89030466307593
+              ]
+            }
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "pixelCoords": [
+                6040,
+                3008
+              ]
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2.391071862355866,
+                48.890298980798576
+              ]
+            }
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "pixelCoords": [
+                8416,
+                2995
+              ]
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2.4047083988501394,
+                48.89029168601174
+              ]
+            }
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "pixelCoords": [
+                1329,
+                5398
+              ]
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2.363793828120495,
+                48.881316536637264
+              ]
+            }
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "pixelCoords": [
+                3688,
+                5407
+              ]
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2.3774279283927306,
+                48.88131246814597
+              ]
+            }
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "pixelCoords": [
+                6052,
+                5393
+              ]
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2.391062025010569,
+                48.88130678765135
+              ]
+            }
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "pixelCoords": [
+                8426,
+                5382
+              ]
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2.4046961167628846,
+                48.881299495154586
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
