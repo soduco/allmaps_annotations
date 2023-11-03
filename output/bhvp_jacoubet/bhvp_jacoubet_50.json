@@ -15,10 +15,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https%3A%2F%2Fiiif%2Egeohistoricaldata%2Eorg%2Fiiif%2F3%2FAtlas_de_Jacoubet_-_50%2E_Barri%C3%A8re_Croulebarbe_et_ses_environs_-_BHVP%2Ejpg/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_50._Barriere_Croulebarbe_et_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https%3A%2F%2Fiiif%2Egeohistoricaldata%2Eorg%2Fiiif%2F3%2FAtlas_de_Jacoubet_-_50%2E_Barri%C3%A8re_Croulebarbe_et_ses_environs_-_BHVP%2Ejpg",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_50._Barriere_Croulebarbe_et_ses_environs_-_BHVP.jpg",
             "type": "ImageService3"
           }
         ],

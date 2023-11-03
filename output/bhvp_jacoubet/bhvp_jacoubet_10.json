@@ -15,16 +15,16 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https%3A%2F%2Fiiif%2Egeohistoricaldata%2Eorg%2Fiiif%2F3%2FAtlas_de_Jacoubet_-_10%2E_Route_de_Neuilly_%C3%A0_Paris_et_ses_environs_-_BHVP%2Ejpg/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_10._Route_de_Neuilly_a_Paris_et_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https%3A%2F%2Fiiif%2Egeohistoricaldata%2Eorg%2Fiiif%2F3%2FAtlas_de_Jacoubet_-_10%2E_Route_de_Neuilly_%C3%A0_Paris_et_ses_environs_-_BHVP%2Ejpg",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_10._Route_de_Neuilly_a_Paris_et_ses_environs_-_BHVP.jpg",
             "type": "ImageService3"
           }
         ],
         "selector": {
           "type": "SvgSelector",
-          "value": "<svg width=\"5866\" height=\"7333\"><polygon points=\"6208,390 4750,390 3294,390 1838,388 373,384 373,384 377,1850 378,3311 372,4775 359,6236 342,7695 342,7695 1797,7701 3253,7709 4712,7717 6170,7714 6170,7714 6167,6250 6172,4784 6181,3318 6195,1856 6208,390\" /></svg>"
+          "value": "<svg width=\"5865\" height=\"7332\"><polygon points=\"6209,391 4750,390 3294,390 1838,388 374,385 374,385 383,1856 379,3311 372,4775 360,6236 344,7695 344,7695 1797,7701 3253,7709 4712,7717 6170,7714 6170,7714 6167,6250 6172,4784 6181,3318 6195,1856 6209,391\" /></svg>"
         }
       },
       "body": {
@@ -41,8 +41,8 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                373,
-                384
+                374,
+                385
               ]
             },
             "geometry": {
@@ -57,8 +57,8 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                377,
-                1850
+                383,
+                1856
               ]
             },
             "geometry": {
@@ -73,7 +73,7 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                378,
+                379,
                 3311
               ]
             },
@@ -105,7 +105,7 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                359,
+                360,
                 6236
               ]
             },
@@ -121,7 +121,7 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                342,
+                344,
                 7695
               ]
             },
@@ -425,8 +425,8 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                6208,
-                390
+                6209,
+                391
               ]
             },
             "geometry": {

@@ -15,16 +15,16 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https%3A%2F%2Fiiif%2Egeohistoricaldata%2Eorg%2Fiiif%2F3%2FAtlas_de_Jacoubet_-_03%2E_Partie_de_la_commune_de_Monceau_et_de_ses_environs_-_BHVP%2Ejpg/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_03._Partie_de_la_commune_de_Monceau_et_de_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https%3A%2F%2Fiiif%2Egeohistoricaldata%2Eorg%2Fiiif%2F3%2FAtlas_de_Jacoubet_-_03%2E_Partie_de_la_commune_de_Monceau_et_de_ses_environs_-_BHVP%2Ejpg",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_03._Partie_de_la_commune_de_Monceau_et_de_ses_environs_-_BHVP.jpg",
             "type": "ImageService3"
           }
         ],
         "selector": {
           "type": "SvgSelector",
-          "value": "<svg width=\"5871\" height=\"5850\"><polygon points=\"6138,512 4671,522 3212,526 1749,535 280,540 280,540 281,1997 280,3446 275,4907 268,6360 268,6360 1739,6362 3206,6361 4671,6353 6139,6346 6139,6346 6138,4887 6139,3425 6134,1971 6138,512\" /></svg>"
+          "value": "<svg width=\"5870\" height=\"5850\"><polygon points=\"6138,512 4671,522 3212,526 1749,535 281,540 281,540 282,1998 281,3446 276,4907 269,6360 269,6360 1739,6362 3206,6361 4671,6353 6139,6346 6139,6346 6138,4887 6139,3425 6134,1971 6138,512\" /></svg>"
         }
       },
       "body": {
@@ -41,7 +41,7 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                280,
+                281,
                 540
               ]
             },
@@ -57,8 +57,8 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                281,
-                1997
+                282,
+                1998
               ]
             },
             "geometry": {
@@ -73,7 +73,7 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                280,
+                281,
                 3446
               ]
             },
@@ -89,7 +89,7 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                275,
+                276,
                 4907
               ]
             },
@@ -105,7 +105,7 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                268,
+                269,
                 6360
               ]
             },

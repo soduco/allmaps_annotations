@@ -15,16 +15,16 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https%3A%2F%2Fiiif%2Egeohistoricaldata%2Eorg%2Fiiif%2F3%2FAtlas_de_Jacoubet_-_07%2E_Barri%C3%A8re_de_la_Villette_et_ses_environs_-_BHVP%2Ejpg/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_07._Barriere_de_la_Villette_et_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https%3A%2F%2Fiiif%2Egeohistoricaldata%2Eorg%2Fiiif%2F3%2FAtlas_de_Jacoubet_-_07%2E_Barri%C3%A8re_de_la_Villette_et_ses_environs_-_BHVP%2Ejpg",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_07._Barriere_de_la_Villette_et_ses_environs_-_BHVP.jpg",
             "type": "ImageService3"
           }
         ],
         "selector": {
           "type": "SvgSelector",
-          "value": "<svg width=\"5910\" height=\"5860\"><polygon points=\"6123,497 4651,495 3180,495 1698,495 232,496 232,496 232,1962 230,3413 221,4884 213,6353 213,6353 1683,6352 3150,6353 4617,6352 6085,6355 6085,6355 6102,4887 6107,3420 6115,1961 6123,497\" /></svg>"
+          "value": "<svg width=\"5910\" height=\"5859\"><polygon points=\"6124,497 4651,496 3180,496 1698,496 233,497 233,497 233,1962 231,3413 223,4884 214,6353 214,6353 1683,6352 3150,6353 4617,6352 6085,6355 6085,6355 6102,4887 6107,3420 6115,1961 6124,497\" /></svg>"
         }
       },
       "body": {
@@ -41,8 +41,8 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                232,
-                496
+                233,
+                497
               ]
             },
             "geometry": {
@@ -57,7 +57,7 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                232,
+                233,
                 1962
               ]
             },
@@ -73,7 +73,7 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                230,
+                231,
                 3413
               ]
             },
@@ -89,7 +89,7 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                221,
+                223,
                 4884
               ]
             },
@@ -105,7 +105,7 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                213,
+                214,
                 6353
               ]
             },
@@ -122,7 +122,7 @@
             "properties": {
               "pixelCoords": [
                 1698,
-                495
+                496
               ]
             },
             "geometry": {
@@ -202,7 +202,7 @@
             "properties": {
               "pixelCoords": [
                 3180,
-                495
+                496
               ]
             },
             "geometry": {
@@ -282,7 +282,7 @@
             "properties": {
               "pixelCoords": [
                 4651,
-                495
+                496
               ]
             },
             "geometry": {
@@ -361,7 +361,7 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                6123,
+                6124,
                 497
               ]
             },

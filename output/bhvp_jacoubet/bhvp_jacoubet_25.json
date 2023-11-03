@@ -15,16 +15,16 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https%3A%2F%2Fiiif%2Egeohistoricaldata%2Eorg%2Fiiif%2F3%2FAtlas_de_Jacoubet_-_25%2E_Th%C3%A9%C3%A2tres_de_la_Ga%C3%AEt%C3%A9_et_du_Cirque-Olympique_et_leurs_environs_-_BHVP%2Ejpg/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_25._Theatres_de_la_Gaite_et_du_Cirque-Olympique_et_leurs_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https%3A%2F%2Fiiif%2Egeohistoricaldata%2Eorg%2Fiiif%2F3%2FAtlas_de_Jacoubet_-_25%2E_Th%C3%A9%C3%A2tres_de_la_Ga%C3%AEt%C3%A9_et_du_Cirque-Olympique_et_leurs_environs_-_BHVP%2Ejpg",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_25._Theatres_de_la_Gaite_et_du_Cirque-Olympique_et_leurs_environs_-_BHVP.jpg",
             "type": "ImageService3"
           }
         ],
         "selector": {
           "type": "SvgSelector",
-          "value": "<svg width=\"5832\" height=\"7235\"><polygon points=\"6263,450 4805,450 3347,450 1889,450 431,450 431,450 431,1897 431,3344 431,4791 431,6238 431,7685 431,7685 1889,7685 3347,7685 4805,7685 6263,7685 6263,7685 6263,6238 6263,4791 6263,3344 6263,1897 6263,450\" /></svg>"
+          "value": "<svg width=\"5890\" height=\"7296\"><polygon points=\"6309,450 4844,451 3377,446 1914,440 439,437 439,437 442,1896 438,3347 434,4811 424,6268 419,7728 419,7728 1874,7731 3337,7733 4790,7732 6259,7729 6259,7729 6264,6270 6275,4814 6285,3359 6290,1904 6309,450\" /></svg>"
         }
       },
       "body": {
@@ -41,8 +41,8 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                431,
-                450
+                439,
+                437
               ]
             },
             "geometry": {
@@ -57,8 +57,8 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                431,
-                1897
+                442,
+                1896
               ]
             },
             "geometry": {
@@ -73,8 +73,8 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                431,
-                3344
+                438,
+                3347
               ]
             },
             "geometry": {
@@ -89,8 +89,8 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                431,
-                4791
+                434,
+                4811
               ]
             },
             "geometry": {
@@ -105,8 +105,8 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                431,
-                6238
+                424,
+                6268
               ]
             },
             "geometry": {
@@ -121,8 +121,8 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                431,
-                7685
+                419,
+                7728
               ]
             },
             "geometry": {
@@ -137,8 +137,8 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                1889,
-                450
+                1914,
+                440
               ]
             },
             "geometry": {
@@ -153,8 +153,8 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                1889,
-                1897
+                1907,
+                1898
               ]
             },
             "geometry": {
@@ -169,8 +169,8 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                1889,
-                3344
+                1901,
+                3350
               ]
             },
             "geometry": {
@@ -185,8 +185,8 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                1889,
-                4791
+                1891,
+                4814
               ]
             },
             "geometry": {
@@ -201,8 +201,8 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                1889,
-                6238
+                1885,
+                6272
               ]
             },
             "geometry": {
@@ -217,8 +217,8 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                1889,
-                7685
+                1874,
+                7731
               ]
             },
             "geometry": {
@@ -233,8 +233,8 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                3347,
-                450
+                3377,
+                446
               ]
             },
             "geometry": {
@@ -249,8 +249,8 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                3347,
-                1897
+                3367,
+                1901
               ]
             },
             "geometry": {
@@ -265,8 +265,8 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                3347,
-                3344
+                3361,
+                3354
               ]
             },
             "geometry": {
@@ -281,8 +281,8 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                3347,
-                4791
+                3352,
+                4819
               ]
             },
             "geometry": {
@@ -297,8 +297,8 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                3347,
-                6238
+                3345,
+                6274
               ]
             },
             "geometry": {
@@ -313,8 +313,8 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                3347,
-                7685
+                3337,
+                7733
               ]
             },
             "geometry": {
@@ -329,8 +329,8 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                4805,
-                450
+                4844,
+                451
               ]
             },
             "geometry": {
@@ -345,8 +345,8 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                4805,
-                1897
+                4833,
+                1906
               ]
             },
             "geometry": {
@@ -361,8 +361,8 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                4805,
-                3344
+                4823,
+                3358
               ]
             },
             "geometry": {
@@ -377,8 +377,8 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                4805,
-                4791
+                4812,
+                4818
               ]
             },
             "geometry": {
@@ -393,8 +393,8 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                4805,
-                6238
+                4802,
+                6275
               ]
             },
             "geometry": {
@@ -409,8 +409,8 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                4805,
-                7685
+                4790,
+                7732
               ]
             },
             "geometry": {
@@ -425,7 +425,7 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                6263,
+                6309,
                 450
               ]
             },
@@ -441,8 +441,8 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                6263,
-                1897
+                6290,
+                1904
               ]
             },
             "geometry": {
@@ -457,8 +457,8 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                6263,
-                3344
+                6285,
+                3359
               ]
             },
             "geometry": {
@@ -473,8 +473,8 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                6263,
-                4791
+                6275,
+                4814
               ]
             },
             "geometry": {
@@ -489,8 +489,8 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                6263,
-                6238
+                6264,
+                6270
               ]
             },
             "geometry": {
@@ -505,8 +505,8 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                6263,
-                7685
+                6259,
+                7729
               ]
             },
             "geometry": {

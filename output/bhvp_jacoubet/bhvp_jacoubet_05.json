@@ -15,16 +15,16 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https%3A%2F%2Fiiif%2Egeohistoricaldata%2Eorg%2Fiiif%2F3%2FAtlas_de_Jacoubet_-_05%2E_Partie_de_la_commune_de_Montmartre_et_de_ses_environs_-_BHVP%2Ejpg/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_05._Partie_de_la_commune_de_Montmartre_et_de_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https%3A%2F%2Fiiif%2Egeohistoricaldata%2Eorg%2Fiiif%2F3%2FAtlas_de_Jacoubet_-_05%2E_Partie_de_la_commune_de_Montmartre_et_de_ses_environs_-_BHVP%2Ejpg",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_05._Partie_de_la_commune_de_Montmartre_et_de_ses_environs_-_BHVP.jpg",
             "type": "ImageService3"
           }
         ],
         "selector": {
           "type": "SvgSelector",
-          "value": "<svg width=\"5915\" height=\"5849\"><polygon points=\"6103,456 4632,463 3165,468 1703,472 231,473 231,473 228,1923 216,3377 204,4840 188,6293 188,6293 1659,6295 3131,6299 4604,6300 6069,6305 6069,6305 6079,4847 6089,3380 6092,1919 6103,456\" /></svg>"
+          "value": "<svg width=\"5913\" height=\"5848\"><polygon points=\"6103,457 4632,464 3165,469 1703,473 232,474 232,474 229,1923 217,3377 205,4840 190,6293 190,6293 1659,6295 3131,6299 4604,6300 6069,6305 6069,6305 6079,4847 6089,3380 6092,1919 6103,457\" /></svg>"
         }
       },
       "body": {
@@ -41,8 +41,8 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                231,
-                473
+                232,
+                474
               ]
             },
             "geometry": {
@@ -57,7 +57,7 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                228,
+                229,
                 1923
               ]
             },
@@ -73,7 +73,7 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                216,
+                217,
                 3377
               ]
             },
@@ -89,7 +89,7 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                204,
+                205,
                 4840
               ]
             },
@@ -105,7 +105,7 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                188,
+                190,
                 6293
               ]
             },
@@ -122,7 +122,7 @@
             "properties": {
               "pixelCoords": [
                 1703,
-                472
+                473
               ]
             },
             "geometry": {
@@ -202,7 +202,7 @@
             "properties": {
               "pixelCoords": [
                 3165,
-                468
+                469
               ]
             },
             "geometry": {
@@ -282,7 +282,7 @@
             "properties": {
               "pixelCoords": [
                 4632,
-                463
+                464
               ]
             },
             "geometry": {
@@ -362,7 +362,7 @@
             "properties": {
               "pixelCoords": [
                 6103,
-                456
+                457
               ]
             },
             "geometry": {

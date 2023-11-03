@@ -15,16 +15,16 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https%3A%2F%2Fiiif%2Egeohistoricaldata%2Eorg%2Fiiif%2F3%2FAtlas_de_Jacoubet_-_12%2E_Abattoir_du_Roule_et_ses_environs_-_BHVP%2Ejpg/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_12._Abattoir_du_Roule_et_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https%3A%2F%2Fiiif%2Egeohistoricaldata%2Eorg%2Fiiif%2F3%2FAtlas_de_Jacoubet_-_12%2E_Abattoir_du_Roule_et_ses_environs_-_BHVP%2Ejpg",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_12._Abattoir_du_Roule_et_ses_environs_-_BHVP.jpg",
             "type": "ImageService3"
           }
         ],
         "selector": {
           "type": "SvgSelector",
-          "value": "<svg width=\"5924\" height=\"7304\"><polygon points=\"6093,369 4636,366 3162,362 1690,362 223,363 223,363 220,1827 212,3278 200,4733 184,6188 169,7646 169,7646 1636,7647 3100,7652 4566,7657 6035,7666 6035,7666 6040,6203 6054,4750 6070,3290 6081,1832 6093,369\" /></svg>"
+          "value": "<svg width=\"5922\" height=\"7303\"><polygon points=\"6093,370 4636,367 3162,363 1690,363 223,364 223,364 221,1827 213,3278 201,4733 185,6188 171,7646 171,7646 1636,7647 3100,7652 4566,7657 6035,7666 6035,7666 6040,6203 6054,4750 6070,3290 6081,1832 6093,370\" /></svg>"
         }
       },
       "body": {
@@ -42,7 +42,7 @@
             "properties": {
               "pixelCoords": [
                 223,
-                363
+                364
               ]
             },
             "geometry": {
@@ -57,7 +57,7 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                220,
+                221,
                 1827
               ]
             },
@@ -73,7 +73,7 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                212,
+                213,
                 3278
               ]
             },
@@ -89,7 +89,7 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                200,
+                201,
                 4733
               ]
             },
@@ -105,7 +105,7 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                184,
+                185,
                 6188
               ]
             },
@@ -121,7 +121,7 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                169,
+                171,
                 7646
               ]
             },
@@ -138,7 +138,7 @@
             "properties": {
               "pixelCoords": [
                 1690,
-                362
+                363
               ]
             },
             "geometry": {
@@ -234,7 +234,7 @@
             "properties": {
               "pixelCoords": [
                 3162,
-                362
+                363
               ]
             },
             "geometry": {
@@ -330,7 +330,7 @@
             "properties": {
               "pixelCoords": [
                 4636,
-                366
+                367
               ]
             },
             "geometry": {
@@ -426,7 +426,7 @@
             "properties": {
               "pixelCoords": [
                 6093,
-                369
+                370
               ]
             },
             "geometry": {
