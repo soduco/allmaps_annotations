@@ -19,7 +19,7 @@
         "service": [
           {
             "@id": "https%3A%2F%2Fiiif%2Egeohistoricaldata%2Eorg%2Fiiif%2F3%2FAtlas_de_Jacoubet_-_25%2E_Th%C3%A9%C3%A2tres_de_la_Ga%C3%AEt%C3%A9_et_du_Cirque-Olympique_et_leurs_environs_-_BHVP%2Ejpg",
-            "type": "ImageService1"
+            "type": "ImageService3"
           }
         ],
         "selector": {

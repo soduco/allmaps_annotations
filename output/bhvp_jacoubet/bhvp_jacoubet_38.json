@@ -19,7 +19,7 @@
         "service": [
           {
             "@id": "https%3A%2F%2Fiiif%2Egeohistoricaldata%2Eorg%2Fiiif%2F3%2FAtlas_de_Jacoubet_-_38%2E_Plaine_de_Grenelle_est_-_BHVP%2Ejpg",
-            "type": "ImageService1"
+            "type": "ImageService3"
           }
         ],
         "selector": {
