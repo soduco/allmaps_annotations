@@ -6,7 +6,7 @@
   "items": [
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_03",
+      "id": "bhvp_jacoubet_03",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -15,10 +15,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_03._Partie_de_la_commune_de_Monceau_et_de_ses_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_03._Partie_de_la_commune_de_Monceau_et_de_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_03._Partie_de_la_commune_de_Monceau_et_de_ses_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_03._Partie_de_la_commune_de_Monceau_et_de_ses_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -442,7 +442,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_04",
+      "id": "bhvp_jacoubet_04",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -451,10 +451,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_04._Partie_de_la_commune_de_Clichy_et_de_ses_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_04._Partie_de_la_commune_de_Clichy_et_de_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_04._Partie_de_la_commune_de_Clichy_et_de_ses_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_04._Partie_de_la_commune_de_Clichy_et_de_ses_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -878,7 +878,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_05",
+      "id": "bhvp_jacoubet_05",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -887,10 +887,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_05._Partie_de_la_commune_de_Montmartre_et_de_ses_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_05._Partie_de_la_commune_de_Montmartre_et_de_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_05._Partie_de_la_commune_de_Montmartre_et_de_ses_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_05._Partie_de_la_commune_de_Montmartre_et_de_ses_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -1314,7 +1314,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_06",
+      "id": "bhvp_jacoubet_06",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -1323,10 +1323,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_06._Partie_de_la_commune_de_La_Chapelle_et_de_ses_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_06._Partie_de_la_commune_de_La_Chapelle_et_de_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_06._Partie_de_la_commune_de_La_Chapelle_et_de_ses_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_06._Partie_de_la_commune_de_La_Chapelle_et_de_ses_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -1750,7 +1750,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_07",
+      "id": "bhvp_jacoubet_07",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -1759,10 +1759,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_07._Barri\u00e8re_de_la_Villette_et_ses_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_07._Barri\u00e8re_de_la_Villette_et_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_07._Barri\u00e8re_de_la_Villette_et_ses_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_07._Barri\u00e8re_de_la_Villette_et_ses_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -2186,7 +2186,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_08",
+      "id": "bhvp_jacoubet_08",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -2195,10 +2195,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_08_et_09._Plan_dassemblage_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_08_et_09._Plan_dassemblage_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_08_et_09._Plan_dassemblage_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_08_et_09._Plan_dassemblage_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -2622,7 +2622,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_10",
+      "id": "bhvp_jacoubet_10",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -2631,10 +2631,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_10._Route_de_Neuilly_\u00e0_Paris_et_ses_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_10._Route_de_Neuilly_\u00e0_Paris_et_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_10._Route_de_Neuilly_\u00e0_Paris_et_ses_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_10._Route_de_Neuilly_\u00e0_Paris_et_ses_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -3138,7 +3138,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_11",
+      "id": "bhvp_jacoubet_11",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -3147,10 +3147,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_11._Hospice_Beaujon_et_ses_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_11._Hospice_Beaujon_et_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_11._Hospice_Beaujon_et_ses_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_11._Hospice_Beaujon_et_ses_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -3654,7 +3654,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_12",
+      "id": "bhvp_jacoubet_12",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -3663,10 +3663,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_12._Abattoir_du_Roule_et_ses_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_12._Abattoir_du_Roule_et_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_12._Abattoir_du_Roule_et_ses_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_12._Abattoir_du_Roule_et_ses_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -4170,7 +4170,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_13",
+      "id": "bhvp_jacoubet_13",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -4179,10 +4179,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_13._Coll\u00e8ge_Bourbon_et_ses_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_13._Coll\u00e8ge_Bourbon_et_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_13._Coll\u00e8ge_Bourbon_et_ses_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_13._Coll\u00e8ge_Bourbon_et_ses_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -4686,7 +4686,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_14",
+      "id": "bhvp_jacoubet_14",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -4695,10 +4695,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_14._Acad\u00e9mie_Royale_de_Musique_et_ses_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_14._Acad\u00e9mie_Royale_de_Musique_et_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_14._Acad\u00e9mie_Royale_de_Musique_et_ses_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_14._Acad\u00e9mie_Royale_de_Musique_et_ses_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -5202,7 +5202,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_15",
+      "id": "bhvp_jacoubet_15",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -5211,10 +5211,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_15._Eglise_St_Laurent_et_ses_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_15._Eglise_St_Laurent_et_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_15._Eglise_St_Laurent_et_ses_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_15._Eglise_St_Laurent_et_ses_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -5718,7 +5718,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_16",
+      "id": "bhvp_jacoubet_16",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -5727,10 +5727,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_16._Hospice_St_Louis_et_ses_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_16._Hospice_St_Louis_et_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_16._Hospice_St_Louis_et_ses_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_16._Hospice_St_Louis_et_ses_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -6234,7 +6234,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_17",
+      "id": "bhvp_jacoubet_17",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -6243,10 +6243,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_17._Commune_de_Belleville_et_ses_environs_ouest_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_17._Commune_de_Belleville_et_ses_environs_ouest_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_17._Commune_de_Belleville_et_ses_environs_ouest_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_17._Commune_de_Belleville_et_ses_environs_ouest_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -6750,7 +6750,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_18",
+      "id": "bhvp_jacoubet_18",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -6759,10 +6759,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_18._Commune_de_Belleville_et_ses_environs_est_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_18._Commune_de_Belleville_et_ses_environs_est_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_18._Commune_de_Belleville_et_ses_environs_est_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_18._Commune_de_Belleville_et_ses_environs_est_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -7266,7 +7266,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_19",
+      "id": "bhvp_jacoubet_19",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -7275,10 +7275,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_19._Partie_de_la_commune_de_Passy,_Barri\u00e8re_de_Longchamp_et_ses_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_19._Partie_de_la_commune_de_Passy,_Barri\u00e8re_de_Longchamp_et_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_19._Partie_de_la_commune_de_Passy,_Barri\u00e8re_de_Longchamp_et_ses_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_19._Partie_de_la_commune_de_Passy,_Barri\u00e8re_de_Longchamp_et_ses_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -7782,7 +7782,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_20",
+      "id": "bhvp_jacoubet_20",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -7791,10 +7791,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_20._Eglise_St_Pierre,_Gros_Caillou_et_Chaillot_et_leurs_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_20._Eglise_St_Pierre,_Gros_Caillou_et_Chaillot_et_leurs_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_20._Eglise_St_Pierre,_Gros_Caillou_et_Chaillot_et_leurs_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_20._Eglise_St_Pierre,_Gros_Caillou_et_Chaillot_et_leurs_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -8298,7 +8298,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_21",
+      "id": "bhvp_jacoubet_21",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -8307,10 +8307,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_21._Champs-Elys\u00e9es_et_leurs_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_21._Champs-Elys\u00e9es_et_leurs_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_21._Champs-Elys\u00e9es_et_leurs_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_21._Champs-Elys\u00e9es_et_leurs_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -8814,7 +8814,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_22",
+      "id": "bhvp_jacoubet_22",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -8823,10 +8823,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_22._Tuileries_et_leurs_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_22._Tuileries_et_leurs_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_22._Tuileries_et_leurs_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_22._Tuileries_et_leurs_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -9330,7 +9330,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_23",
+      "id": "bhvp_jacoubet_23",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -9339,10 +9339,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_23._Eglise_St_Eustache_et_ses_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_23._Eglise_St_Eustache_et_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_23._Eglise_St_Eustache_et_ses_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_23._Eglise_St_Eustache_et_ses_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -9846,7 +9846,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_24",
+      "id": "bhvp_jacoubet_24",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -9855,10 +9855,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_24._Eglise_St_Nicolas_des_Champs_et_ses_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_24._Eglise_St_Nicolas_des_Champs_et_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_24._Eglise_St_Nicolas_des_Champs_et_ses_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_24._Eglise_St_Nicolas_des_Champs_et_ses_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -10362,7 +10362,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_25",
+      "id": "bhvp_jacoubet_25",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -10371,10 +10371,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_25._Th\u00e9\u00e2tres_de_la_Ga\u00eet\u00e9_et_du_Cirque-Olympique_et_leurs_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_25._Th\u00e9\u00e2tres_de_la_Ga\u00eet\u00e9_et_du_Cirque-Olympique_et_leurs_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_25._Th\u00e9\u00e2tres_de_la_Ga\u00eet\u00e9_et_du_Cirque-Olympique_et_leurs_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_25._Th\u00e9\u00e2tres_de_la_Ga\u00eet\u00e9_et_du_Cirque-Olympique_et_leurs_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -10878,7 +10878,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_26",
+      "id": "bhvp_jacoubet_26",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -10887,10 +10887,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_26._Abattoir_M\u00e9nilmontant_et_ses_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_26._Abattoir_M\u00e9nilmontant_et_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_26._Abattoir_M\u00e9nilmontant_et_ses_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_26._Abattoir_M\u00e9nilmontant_et_ses_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -11394,7 +11394,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_27",
+      "id": "bhvp_jacoubet_27",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -11403,10 +11403,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_27._Cimeti\u00e8re_du_P\u00e8re-Lachaise_et_ses_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_27._Cimeti\u00e8re_du_P\u00e8re-Lachaise_et_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_27._Cimeti\u00e8re_du_P\u00e8re-Lachaise_et_ses_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_27._Cimeti\u00e8re_du_P\u00e8re-Lachaise_et_ses_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -11910,7 +11910,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_28",
+      "id": "bhvp_jacoubet_28",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -11919,10 +11919,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_28._Barri\u00e8re_de_la_Cunette_et_ses_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_28._Barri\u00e8re_de_la_Cunette_et_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_28._Barri\u00e8re_de_la_Cunette_et_ses_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_28._Barri\u00e8re_de_la_Cunette_et_ses_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -12426,7 +12426,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_29",
+      "id": "bhvp_jacoubet_29",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -12435,10 +12435,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_29._Champ_de_Mars_et_ses_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_29._Champ_de_Mars_et_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_29._Champ_de_Mars_et_ses_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_29._Champ_de_Mars_et_ses_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -12942,7 +12942,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_30",
+      "id": "bhvp_jacoubet_30",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -12951,10 +12951,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_30._H\u00f4tel_Royal_des_Invalides_et_ses_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_30._H\u00f4tel_Royal_des_Invalides_et_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_30._H\u00f4tel_Royal_des_Invalides_et_ses_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_30._H\u00f4tel_Royal_des_Invalides_et_ses_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -13458,7 +13458,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_31",
+      "id": "bhvp_jacoubet_31",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -13467,10 +13467,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_31._Eglise_St_Sulpice_et_ses_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_31._Eglise_St_Sulpice_et_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_31._Eglise_St_Sulpice_et_ses_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_31._Eglise_St_Sulpice_et_ses_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -13974,7 +13974,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_32",
+      "id": "bhvp_jacoubet_32",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -13983,10 +13983,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_32._Palais_de_Justice_et_ses_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_32._Palais_de_Justice_et_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_32._Palais_de_Justice_et_ses_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_32._Palais_de_Justice_et_ses_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -14490,7 +14490,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_33",
+      "id": "bhvp_jacoubet_33",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -14499,10 +14499,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_33._Ile_Saint-Louis_et_ses_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_33._Ile_Saint-Louis_et_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_33._Ile_Saint-Louis_et_ses_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_33._Ile_Saint-Louis_et_ses_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -15006,7 +15006,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_34",
+      "id": "bhvp_jacoubet_34",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -15015,10 +15015,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_34.Place_de_la_Bastille_et_ses_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_34.Place_de_la_Bastille_et_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_34.Place_de_la_Bastille_et_ses_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_34.Place_de_la_Bastille_et_ses_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -15522,7 +15522,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_35",
+      "id": "bhvp_jacoubet_35",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -15531,10 +15531,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_35._Manufacture_des_Glaces_et_ses_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_35._Manufacture_des_Glaces_et_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_35._Manufacture_des_Glaces_et_ses_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_35._Manufacture_des_Glaces_et_ses_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -16038,7 +16038,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_36",
+      "id": "bhvp_jacoubet_36",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -16047,10 +16047,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_36._Barri\u00e8re_du_Tr\u00f4ne_et_ses_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_36._Barri\u00e8re_du_Tr\u00f4ne_et_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_36._Barri\u00e8re_du_Tr\u00f4ne_et_ses_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_36._Barri\u00e8re_du_Tr\u00f4ne_et_ses_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -16554,7 +16554,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_37",
+      "id": "bhvp_jacoubet_37",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -16563,10 +16563,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_37._Plaine_de_Grenelle_ouest_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_37._Plaine_de_Grenelle_ouest_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_37._Plaine_de_Grenelle_ouest_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_37._Plaine_de_Grenelle_ouest_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -17070,7 +17070,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_38",
+      "id": "bhvp_jacoubet_38",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -17079,10 +17079,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_38._Plaine_de_Grenelle_est_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_38._Plaine_de_Grenelle_est_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_38._Plaine_de_Grenelle_est_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_38._Plaine_de_Grenelle_est_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -17586,7 +17586,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_39",
+      "id": "bhvp_jacoubet_39",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -17595,10 +17595,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_39._Barri\u00e8re_du_Maine_et_ses_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_39._Barri\u00e8re_du_Maine_et_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_39._Barri\u00e8re_du_Maine_et_ses_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_39._Barri\u00e8re_du_Maine_et_ses_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -18102,7 +18102,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_40",
+      "id": "bhvp_jacoubet_40",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -18111,10 +18111,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_40._Barri\u00e8re_du_Mont-Parnasse_et_ses_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_40._Barri\u00e8re_du_Mont-Parnasse_et_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_40._Barri\u00e8re_du_Mont-Parnasse_et_ses_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_40._Barri\u00e8re_du_Mont-Parnasse_et_ses_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -18618,7 +18618,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_41",
+      "id": "bhvp_jacoubet_41",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -18627,10 +18627,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_41._H\u00f4pital_Militaire_du_Val-de-Gr\u00e2ce_et_ses_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_41._H\u00f4pital_Militaire_du_Val-de-Gr\u00e2ce_et_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_41._H\u00f4pital_Militaire_du_Val-de-Gr\u00e2ce_et_ses_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_41._H\u00f4pital_Militaire_du_Val-de-Gr\u00e2ce_et_ses_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -19134,7 +19134,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_42",
+      "id": "bhvp_jacoubet_42",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -19143,10 +19143,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_42._Jardin_du_Roi_et_ses_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_42._Jardin_du_Roi_et_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_42._Jardin_du_Roi_et_ses_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_42._Jardin_du_Roi_et_ses_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -19650,7 +19650,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_43",
+      "id": "bhvp_jacoubet_43",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -19659,10 +19659,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_43._Salp\u00e9tri\u00e8re,_Hospice_de_la_Vieillesse,_Femmes_et_ses_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_43._Salp\u00e9tri\u00e8re,_Hospice_de_la_Vieillesse,_Femmes_et_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_43._Salp\u00e9tri\u00e8re,_Hospice_de_la_Vieillesse,_Femmes_et_ses_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_43._Salp\u00e9tri\u00e8re,_Hospice_de_la_Vieillesse,_Femmes_et_ses_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -20166,7 +20166,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_44",
+      "id": "bhvp_jacoubet_44",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -20175,10 +20175,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_44._Barri\u00e8re_de_Charenton,_Commune_de_Bercy_et_leurs_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_44._Barri\u00e8re_de_Charenton,_Commune_de_Bercy_et_leurs_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_44._Barri\u00e8re_de_Charenton,_Commune_de_Bercy_et_leurs_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_44._Barri\u00e8re_de_Charenton,_Commune_de_Bercy_et_leurs_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -20682,7 +20682,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_45",
+      "id": "bhvp_jacoubet_45",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -20691,10 +20691,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_45._Barri\u00e8re_de_St_Mand\u00e9_et_ses_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_45._Barri\u00e8re_de_St_Mand\u00e9_et_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_45._Barri\u00e8re_de_St_Mand\u00e9_et_ses_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_45._Barri\u00e8re_de_St_Mand\u00e9_et_ses_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -21198,7 +21198,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_46",
+      "id": "bhvp_jacoubet_46",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -21207,10 +21207,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_46._Nomenclature_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_46._Nomenclature_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_46._Nomenclature_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_46._Nomenclature_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -21298,7 +21298,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_47",
+      "id": "bhvp_jacoubet_47",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -21307,10 +21307,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_47._Nomenclature_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_47._Nomenclature_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_47._Nomenclature_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_47._Nomenclature_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -21398,7 +21398,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_48",
+      "id": "bhvp_jacoubet_48",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -21407,10 +21407,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_48._Nomenclature_et_partie_de_la_Plaine_de_Grenelle_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_48._Nomenclature_et_partie_de_la_Plaine_de_Grenelle_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_48._Nomenclature_et_partie_de_la_Plaine_de_Grenelle_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_48._Nomenclature_et_partie_de_la_Plaine_de_Grenelle_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -21754,7 +21754,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_49",
+      "id": "bhvp_jacoubet_49",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -21763,10 +21763,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_49._Barri\u00e8re_dEnfer_et_ses_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_49._Barri\u00e8re_dEnfer_et_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_49._Barri\u00e8re_dEnfer_et_ses_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_49._Barri\u00e8re_dEnfer_et_ses_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -22222,7 +22222,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_50",
+      "id": "bhvp_jacoubet_50",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -22231,10 +22231,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_50._Barri\u00e8re_Croulebarbe_et_ses_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_50._Barri\u00e8re_Croulebarbe_et_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_50._Barri\u00e8re_Croulebarbe_et_ses_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_50._Barri\u00e8re_Croulebarbe_et_ses_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -22690,7 +22690,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_51",
+      "id": "bhvp_jacoubet_51",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -22699,10 +22699,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_51._Barri\u00e8re_d'Italie_et_ses_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_51._Barri\u00e8re_d'Italie_et_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_51._Barri\u00e8re_d'Italie_et_ses_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_51._Barri\u00e8re_d'Italie_et_ses_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
@@ -23158,7 +23158,7 @@
     },
     {
       "type": "Annotation",
-      "id": "jacoubet_bhvp_52",
+      "id": "bhvp_jacoubet_52",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://geojson.org/geojson-ld/geojson-context.jsonld",
@@ -23167,10 +23167,10 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_52._Nomenclature_des_monuments_et_partie_de_la_Commune_dIvry_et_de_ses_environs_-_BHVP.jpg.points/full/max/0/default.jpg",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_52._Nomenclature_des_monuments_et_partie_de_la_Commune_dIvry_et_de_ses_environs_-_BHVP.jpg/full/max/0/default.jpg",
         "service": [
           {
-            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_52._Nomenclature_des_monuments_et_partie_de_la_Commune_dIvry_et_de_ses_environs_-_BHVP.jpg.points",
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_52._Nomenclature_des_monuments_et_partie_de_la_Commune_dIvry_et_de_ses_environs_-_BHVP.jpg",
             "type": "ImageService1"
           }
         ],
