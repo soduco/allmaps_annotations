@@ -1,4 +1,8 @@
-pandas==1.4.4
-pyproj==3.5.0
-GDAL==3.4.1
-rdflib==7.0.0
+pandas
+pyproj
+iiif_prezi3
+fiona
+geopandas
+opencv-python
+pikepdf
+

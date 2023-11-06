@@ -7,6 +7,8 @@ import json
 from os.path import exists
 from osgeo import ogr
 import sys
+#from rdflib import Graph, BNode, Literal, RDF, URIRef#, GEO
+#from rdflib.namespace import FOAF, XSD
 
 def create_annotation(file_name, input_proj4_string, id, mask_file, output_file_name, url, iiif_image_api_version, gcp_output, old_format=False):
     source = f"{url}/full/max/0/default.jpg"
@@ -22,8 +24,10 @@ def create_annotation(file_name, input_proj4_string, id, mask_file, output_file_
         imageY='sourceY'
     csvFile = pandas.read_csv(file_name,usecols=["mapX","mapY",imageX,imageY],comment='#',skip_blank_lines=True)
     features = []
-    for index, row in csvFile.iterrows():
+    for _, row in csvFile.iterrows():
         (lat,lon) = transformer.transform(row['mapX'], row['mapY'])
+        #node = BNode()
+        
         features.append({
             "type": "Feature",
             "properties": {
@@ -81,6 +85,15 @@ def create_annotation(file_name, input_proj4_string, id, mask_file, output_file_
         line = csvFile[csvFile["mapX"] == map_maxX].sort_values(by=["mapY"],ascending=True)
         points.extend(to_point(line))
         poly = ' '.join(list(map(','.join, points)))
+        # with open(f"extents_{id}.json", "w") as output_file:
+        #     min = transformer.transform(map_minX, map_minY)
+        #     max = transformer.transform(map_maxX, map_maxY)
+        #     json.dump({
+        #         'westBoundLongitude': str(min[1]),
+        #         'eastBoundLongitude': str(max[1]),
+        #         'southBoundLatitude': str(min[0]),
+        #         'northBoundLatitude': str(max[0])
+        #     }, output_file, indent = 1) 
     image_service_type = "ImageService1"
     if (iiif_image_api_version == 2):
         image_service_type = "ImageService1"
@@ -194,10 +207,18 @@ def annotation(entry,iiif_version):
             }
         }
 def createAnnotations(csv_file_name, iiif_version, proj4_string, output_annotation_file, input_mask = None):
-    logging.basicConfig(level='DEBUG')
+    logging.basicConfig(level='INFO')
     entries = []
     csvFile = pandas.read_csv(csv_file_name,usecols=["gcp_file","id","url","annotation_output","gcp_output"],skip_blank_lines=True)
-    for index, row in csvFile.iterrows():
+    # Create a Graph
+    #from rdflib.namespace import _FOAF , _XSD
+    #from rdflib import Namespace
+    #JSONLD = Namespace("http://www.w3.org/ns/anno.jsonld")
+    #g = Graph()
+    #bn = BNode()
+    #g.add((bn, URIRef('type'), Literal("AnnotationPage")))
+    
+    for _, row in csvFile.iterrows():
         file_name = row['gcp_file']
         id = row['id']
         url = row['url']
@@ -206,7 +227,7 @@ def createAnnotations(csv_file_name, iiif_version, proj4_string, output_annotati
         if pandas.notna(row['gcp_output']):
             gcp_output = row['gcp_output']
         if not exists(file_name):
-            logging.debug(f"  Skipping missing file: {file_name}")
+            logging.warning(f"  Skipping missing file: {file_name}")
         else: 
             logging.debug(f"  Creating annotation for file: {file_name} with id {id} and url {url} ({output_file_name})")
             entry = create_annotation(file_name, proj4_string, id, input_mask, output_file_name, url, iiif_image_api_version=iiif_version,gcp_output=gcp_output)
