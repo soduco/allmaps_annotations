@@ -3,14 +3,21 @@
 ## Atlas de Verniquet from BnF
 
 ```shell
-python3 create_annotations.py bnf_verniquet.csv 1 "+proj=omerc +gamma=0.00047289 +lonc=2.33652588 +lon_0=2.33652588 +lat_0=48.83635612 +lat_ts=48.83635612 +x_0=0 +y_0=0 +to_meter=1.9490363 +no_defs +ellps=GRS80" output/bnf_verniquet/annotation_bnf_verniquet.json
+python3 create_annotations.py bnf_verniquet.csv 1 "+proj=aeqd +lat_0=48.83635863 +lon_0=2.33652533 +x_0=0 +y_0=0 +ellps=GRS80 +to_meter=1.94903631 +no_defs" output/bnf_verniquet/annotation_bnf_verniquet.json
 ```
 
 ## Atlas de Verniquet from David Rumsey
 
 ```shell
-python3 create_annotations.py rumsey_verniquet.csv 2 "+proj=omerc +gamma=0.00047289 +lonc=2.33652588 +lon_0=2.33652588 +lat_0=48.83635612 +lat_ts=48.83635612 +x_0=0 +y_0=0 +to_meter=1.9490363 +no_defs +ellps=GRS80" output/rumsey_verniquet/annotation_rumsey_verniquet.json
+python3 create_annotations.py rumsey_verniquet.csv 2 "+proj=aeqd +lat_0=48.83635863 +lon_0=2.33652533 +x_0=0 +y_0=0 +ellps=GRS80 +to_meter=1.94903631 +no_defs" output/rumsey_verniquet/annotation_rumsey_verniquet.json
 ```
+
+## Atlas de Jacoubet from 
+
+```shell
+python3 create_annotations.py jacoubet.csv 2 "+proj=aeqd +lat_0=48.83635863 +lon_0=2.33652533 +x_0=0 +y_0=0 +ellps=GRS80 +no_defs" output/bhvp_jacoubet/annotation_bhvp_jacoubet.json
+```
+
 
 ## Atlas municipal des vingt arrondissements de la ville de Paris dressé sous l'administration de M. E. Poubelle, préfet, sous la direction de M. Alphand,... par les soins de M. L. Fauve, géomètre en chef, avec le concours des géomètres du Plan de Paris... 1878
 from https://bibliotheques-specialisees.paris.fr/ark:/73873/pf0000935100
