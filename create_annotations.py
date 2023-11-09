@@ -9,7 +9,6 @@ from osgeo import ogr
 import sys
 #from rdflib import Graph, BNode, Literal, RDF, URIRef#, GEO
 #from rdflib.namespace import FOAF, XSD
-
 def create_annotation(file_name, input_proj4_string, id, mask_file, output_file_name, url, iiif_image_api_version, gcp_output, old_format=False):
     source = f"{url}/full/max/0/default.jpg"
     crs = CRS.from_proj4(input_proj4_string)
@@ -84,16 +83,20 @@ def create_annotation(file_name, input_proj4_string, id, mask_file, output_file_
         points.extend(to_point(line))
         line = csvFile[csvFile["mapX"] == map_maxX].sort_values(by=["mapY"],ascending=True)
         points.extend(to_point(line))
-        poly = ' '.join(list(map(','.join, points)))
-        # with open(f"extents_{id}.json", "w") as output_file:
-        #     min = transformer.transform(map_minX, map_minY)
-        #     max = transformer.transform(map_maxX, map_maxY)
-        #     json.dump({
-        #         'westBoundLongitude': str(min[1]),
-        #         'eastBoundLongitude': str(max[1]),
-        #         'southBoundLatitude': str(min[0]),
-        #         'northBoundLatitude': str(max[0])
-        #     }, output_file, indent = 1) 
+        #from collections import OrderedDict
+        #points_without_duplicates = list(OrderedDict.fromkeys(points))
+        points_without_duplicates = [i for n, i in enumerate(points) if i not in points[:n]]
+
+        poly = ' '.join(list(map(','.join, points_without_duplicates)))
+        with open(f"tmp_shd/extents_{id}.json", "w") as output_file:
+            min = transformer.transform(map_minX, map_minY)
+            max = transformer.transform(map_maxX, map_maxY)
+            json.dump({
+                'westBoundLongitude': str(min[1]),
+                'eastBoundLongitude': str(max[1]),
+                'southBoundLatitude': str(min[0]),
+                'northBoundLatitude': str(max[0])
+            }, output_file, indent = 1) 
     image_service_type = "ImageService1"
     if (iiif_image_api_version == 2):
         image_service_type = "ImageService1"
@@ -209,7 +212,7 @@ def annotation(entry,iiif_version):
 def createAnnotations(csv_file_name, iiif_version, proj4_string, output_annotation_file, input_mask = None):
     logging.basicConfig(level='INFO')
     entries = []
-    csvFile = pandas.read_csv(csv_file_name,usecols=["gcp_file","id","url","annotation_output","gcp_output"],skip_blank_lines=True)
+    csvFile = pandas.read_csv(csv_file_name,usecols=["gcp_file","id","url","annotation_output","gcp_output","ignore"],skip_blank_lines=True)
     # Create a Graph
     #from rdflib.namespace import _FOAF , _XSD
     #from rdflib import Namespace
@@ -226,8 +229,8 @@ def createAnnotations(csv_file_name, iiif_version, proj4_string, output_annotati
         gcp_output = None
         if pandas.notna(row['gcp_output']):
             gcp_output = row['gcp_output']
-        if not exists(file_name):
-            logging.warning(f"  Skipping missing file: {file_name}")
+        if not exists(file_name) or ("ignore" in row and row["ignore"] == 1):
+            logging.warning(f"  Skipping file: {file_name}")
         else: 
             logging.debug(f"  Creating annotation for file: {file_name} with id {id} and url {url} ({output_file_name})")
             entry = create_annotation(file_name, proj4_string, id, input_mask, output_file_name, url, iiif_image_api_version=iiif_version,gcp_output=gcp_output)

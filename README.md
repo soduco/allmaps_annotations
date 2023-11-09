@@ -62,6 +62,10 @@ python3 create_annotations.py bhdv_atlas_municipal_1937.csv 3 "+proj=omerc +gamm
 ```
 
 ## Parcellaire de Paris des ingénieurs géographes, environ 1820-1833, Service Historique de la Défense, SHDGR/GR/6/M/J10/C/1188 
+First, we create the masks for manual edit:
 ```shell
-python create_annotations.py SHDGR__GR_6_M_J10_C_1188.csv 3 "+proj=aeqd +lat_0=48.83635863 +lon_0=2.33652533 +x_0=0 +y_0=0 +ellps=GRS80 +to_meter=1.94903631 +no_defs" output/SHDGR__GR_6_M_J10_C_1188/SHDGR__GR_6_M_J10_C_1188.json
+python create_masks.py SHDGR__GR_6_M_J10_C_1188.csv SHDGR__GR_6_M_J10_C_1188.masks.gpkg```
+
+```shell
+python create_annotations.py SHDGR__GR_6_M_J10_C_1188.csv 3 "+proj=aeqd +lat_0=48.83635863 +lon_0=2.33652533 +x_0=0 +y_0=0 +ellps=GRS80 +to_meter=1.94903631 +no_defs" output/SHDGR__GR_6_M_J10_C_1188/SHDGR__GR_6_M_J10_C_1188.json SHDGR__GR_6_M_J10_C_1188.masks.gpkg
 ```
