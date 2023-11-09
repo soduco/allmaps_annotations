@@ -9,7 +9,7 @@ from osgeo import ogr
 import sys
 #from rdflib import Graph, BNode, Literal, RDF, URIRef#, GEO
 #from rdflib.namespace import FOAF, XSD
-def create_annotation(file_name, input_proj4_string, id, mask_file, output_file_name, url, iiif_image_api_version, gcp_output, old_format=False):
+def create_annotation(file_name, input_proj4_string, id, mask_file, output_file_name, url, iiif_image_api_version, gcp_output, tps=False, old_format=False):
     source = f"{url}/full/max/0/default.jpg"
     crs = CRS.from_proj4(input_proj4_string)
     crs_4326 = CRS.from_epsg(4326)
@@ -103,6 +103,15 @@ def create_annotation(file_name, input_proj4_string, id, mask_file, output_file_
     else: 
         if (iiif_image_api_version == 3):
             image_service_type = "ImageService3"
+    if tps:
+        transformation = {"type": "thinPlateSpline"}
+    else:
+        transformation = {
+            "type": "polynomial",
+            "options": {
+                "order": 2
+            }
+        }
     dictionary = {
         "type": "AnnotationPage",
         "@context": [
@@ -134,12 +143,7 @@ def create_annotation(file_name, input_proj4_string, id, mask_file, output_file_
             "body": {
                 "type": "FeatureCollection",
                 "purpose": "gcp-georeferencing",
-                "transformation": {
-                    "type": "polynomial",
-                    "options": {
-                        "order": 2
-                    }
-                },
+                "transformation": transformation,
                 "features": features
             }
         }]
@@ -178,7 +182,16 @@ def service(url,image_type,iiif_version):
             "@id": url,
             "type": image_type
         }
-def annotation(entry,iiif_version):
+def annotation(entry,iiif_version, tps):
+    if tps:
+        transformation = {"type": "thinPlateSpline"}
+    else:
+        transformation = {
+            "type": "polynomial",
+            "options": {
+                "order": 2
+            }
+        }
     return {
             "type": "Annotation",
             "id": entry['id'],
@@ -200,16 +213,11 @@ def annotation(entry,iiif_version):
             "body": {
                 "type": "FeatureCollection",
                 "purpose": "gcp-georeferencing",
-                "transformation": {
-                    "type": "polynomial",
-                    "options": {
-                        "order": 2
-                    }
-                },
+                "transformation": transformation,
                 "features": entry['features']
             }
         }
-def createAnnotations(csv_file_name, iiif_version, proj4_string, output_annotation_file, input_mask = None):
+def createAnnotations(csv_file_name, iiif_version, proj4_string, output_annotation_file, input_mask = None, tps = False):
     logging.basicConfig(level='INFO')
     entries = []
     csvFile = pandas.read_csv(csv_file_name,usecols=["gcp_file","id","url","annotation_output","gcp_output","ignore"],skip_blank_lines=True)
@@ -233,11 +241,11 @@ def createAnnotations(csv_file_name, iiif_version, proj4_string, output_annotati
             logging.warning(f"  Skipping file: {file_name}")
         else: 
             logging.debug(f"  Creating annotation for file: {file_name} with id {id} and url {url} ({output_file_name})")
-            entry = create_annotation(file_name, proj4_string, id, input_mask, output_file_name, url, iiif_image_api_version=iiif_version,gcp_output=gcp_output)
+            entry = create_annotation(file_name, proj4_string, id, input_mask, output_file_name, url, iiif_image_api_version=iiif_version,gcp_output=gcp_output,tps=tps)
             entries.append(entry)
     items = []
     for entry in entries:
-        item = annotation(entry,iiif_version)
+        item = annotation(entry,iiif_version,tps)
         items.append(item)
     dictionary = {
         "type": "AnnotationPage",
@@ -264,4 +272,8 @@ if __name__ == '__main__':
     input_mask = None
     if len( sys.argv ) > 5:
         input_mask = sys.argv[5]
-    createAnnotations(csv_file_name=csv_file,iiif_version=iiif_image_api_version,proj4_string=proj4_string, output_annotation_file=output_annotation_file, input_mask=input_mask)
+    tps = False
+    if len( sys.argv ) > 6:
+        if sys.argv[6] == "tps":
+            tps = True
+    createAnnotations(csv_file_name=csv_file,iiif_version=iiif_image_api_version,proj4_string=proj4_string, output_annotation_file=output_annotation_file, input_mask=input_mask, tps=tps)
