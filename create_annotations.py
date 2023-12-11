@@ -5,11 +5,58 @@ import pandas
 from pyproj import CRS, Transformer
 import json
 from os.path import exists
-from osgeo import ogr
+from osgeo import ogr, gdal
 import sys
-#from rdflib import Graph, BNode, Literal, RDF, URIRef#, GEO
-#from rdflib.namespace import FOAF, XSD
-def create_annotation(file_name, input_proj4_string, id, mask_file, output_file_name, url, iiif_image_api_version, gcp_output, tps=False, old_format=False):
+import click
+from subprocess import Popen, PIPE
+
+def gcp(map_x, map_y, source_x, source_y, inverse = False):
+    if inverse:
+        return gdal.GCP(source_x, source_y, 0, map_x, map_y)
+    return gdal.GCP(map_x, map_y, 0, source_x, source_y)
+
+
+def get_geotransform(gcp_file, old_format=False, inverse = False):
+    # reading the CSV file
+    csvFile = pandas.read_csv(gcp_file, comment='#')
+    # displaying the contents of the CSV file
+    if old_format:
+        gcp_list = [gcp(row['mapX'], row['mapY'], row['pixelX'], -row['pixelY'], inverse) for _, row in csvFile.iterrows()]
+    else:
+        gcp_list = [gcp(row['mapX'], row['mapY'], row['sourceX'], -row['sourceY'], inverse) for _, row in csvFile.iterrows()]
+    return gdal.GCPsToGeoTransform(gcp_list)
+
+def get_inv_geotransform(gcp_file, old_format=False):
+    # reading the CSV file
+    csvFile = pandas.read_csv(gcp_file, comment='#')
+    # displaying the contents of the CSV file
+    if old_format:
+        gcp_list = [gdal.GCP(row['mapX'], row['mapY'], 0, row['pixelX'], -row['pixelY']) for _, row in csvFile.iterrows()]
+    else:
+        gcp_list = [gdal.GCP(row['mapX'], row['mapY'], 0, row['sourceX'], -row['sourceY']) for _, row in csvFile.iterrows()]
+    geo_trans = gdal.GCPsToGeoTransform(gcp_list)
+    return gdal.InvGeoTransform(geo_trans)
+
+def get_gcp_text(gcp_file, old_format=False):
+    # reading the CSV file
+    csvFile = pandas.read_csv(gcp_file, comment='#')
+    gcps = []
+    if old_format:
+        for _, row in csvFile.iterrows():
+            gcps.append(f"-gcp {str(row['pixelX'])} {str(row['pixelY'])} {str(row['mapX'])} {str(row['mapY'])}")
+    else:
+        for _, row in csvFile.iterrows():
+            gcps.append(f"-gcp {str(row['sourceX'])} {str(row['sourceY'])} {str(row['mapX'])} {str(row['mapY'])}")
+    return ' '.join(gcps)
+
+def inv_transform(gcp_file, lon, lat, old_format=False):
+    gcps = get_gcp_text(gcp_file=gcp_file, old_format=old_format)
+    p = Popen(f'gdaltransform -i -tps {gcps} -output_xy', stdin=PIPE, stdout=PIPE, universal_newlines=True, shell=True) # run the program
+    print(f'gdaltransform -i -tps {gcps} -output_xy')
+    output = p.communicate("%s %s\n" % (lon, lat))[0] # pass coordinates
+    return tuple(output.rstrip().split(' '))
+    
+def create_annotation(file_name, input_proj4_string, id, mask_file, mask_attribute, output_file_name, url, iiif_image_api_version, gcp_output, tps=False, inverse=False, old_format=False):
     source = f"{url}/full/max/0/default.jpg"
     crs = CRS.from_proj4(input_proj4_string)
     crs_4326 = CRS.from_epsg(4326)
@@ -40,25 +87,56 @@ def create_annotation(file_name, input_proj4_string, id, mask_file, output_file_
     poly = None
     minX,maxX,minY,maxY=0,0,0,0
     if mask_file:
-        conn = ogr.Open(mask_file)
-        lyr = conn.GetLayerByName( id )
+        if mask_attribute:
+            conn = ogr.Open(mask_file.name)
+            lyr = conn.GetLayer(0)
+        else:
+            conn = ogr.Open(mask_file.name)
+            lyr = conn.GetLayerByName( id )
         if lyr is None:
             print('[ ERROR ]: layer name = "%s" could not be found in database "%s"' % ( id, mask_file ))
         else:
+            if mask_attribute:
+                lyr.SetAttributeFilter(f"{mask_attribute} = '{id}'")
+                print(f"{mask_attribute} = '{id}'")
             feature = lyr.GetNextFeature()
             geometry = feature.GetGeometryRef()
-            (minX,maxX,minY,maxY) = geometry.GetEnvelope()
-            #invert Y values
-            minY, maxY = -maxY, -minY
-            #convert to int
-            minX,maxX,minY,maxY=int(minX),int(maxX),int(minY),int(maxY)
-            ring = geometry.GetGeometryRef(0)
-            point_count = ring.GetPointCount()
-            points = []
-            for p in iter(range(point_count)):
-                lon, lat, _ = ring.GetPoint(p)
-                points.append(list((str(int(round(lon))),str(int(-round(lat))))))
-            poly = ' '.join(list(map(','.join, points)))
+            if inverse:
+                #inverse the transform
+                #inv_geotrans = get_geotransform(gcp_file=file_name, old_format=old_format, inverse=True)
+                ring = geometry.GetGeometryRef(0)
+                point_count = ring.GetPointCount()
+                points = []
+                xval = []
+                yval = []
+                for p in iter(range(point_count)):
+                    lon, lat, _ = ring.GetPoint(p)
+                    #x, y= gdal.ApplyGeoTransform(inv_geotrans, lon, lat)
+                    x, y = inv_transform(gcp_file=file_name, lon = lon, lat=lat, old_format=old_format)
+                    x = float(x)
+                    y = -float(y)
+                    xval.append(x)
+                    yval.append(y)
+                    points.append(list((str(int(round(x))),str(int(round(y))))))
+                poly = ' '.join(list(map(','.join, points)))
+                import numpy as np
+                minX = int(np.array(xval).min())
+                maxX = int(np.array(xval).max())
+                minY = int(np.array(yval).min())
+                maxY = int(np.array(yval).max())
+            else:
+                (minX,maxX,minY,maxY) = geometry.GetEnvelope()
+                #invert Y values
+                minY, maxY = -maxY, -minY
+                #convert to int
+                minX,maxX,minY,maxY=int(minX),int(maxX),int(minY),int(maxY)
+                ring = geometry.GetGeometryRef(0)
+                point_count = ring.GetPointCount()
+                points = []
+                for p in iter(range(point_count)):
+                    lon, lat, _ = ring.GetPoint(p)
+                    points.append(list((str(int(round(lon))),str(int(-round(lat))))))
+                poly = ' '.join(list(map(','.join, points)))
     if not poly:
         minX = round(csvFile[imageX].min())
         maxX = round(csvFile[imageX].max())
@@ -217,18 +295,19 @@ def annotation(entry,iiif_version, tps):
                 "features": entry['features']
             }
         }
-def createAnnotations(csv_file_name, iiif_version, proj4_string, output_annotation_file, input_mask = None, tps = False):
+@click.command()
+@click.option('--csv_file', help='csv file name', type=click.File('r'), required=True)
+@click.option('--iiif_version', default = 3, help='iiif_version')
+@click.option('--proj4_string', help='proj4_string', required=True)
+@click.option('--output_annotation_file', help='output annotation file', type=click.File('w'), required=True)
+@click.option('--input_mask', help='input_mask', type=click.File('r'), required=True)
+@click.option("--mask_attribute", help="set the mask attribute")
+@click.option("--tps", is_flag=True, show_default=True, default=False, help="use TPS")
+@click.option("--inverse", is_flag=True, show_default=True, default=False, help="use inverse transform for the mask (reproject into image space)")
+def createAnnotations(csv_file, iiif_version, proj4_string, output_annotation_file, input_mask = None, mask_attribute = None, tps = False, inverse = False):
     logging.basicConfig(level='INFO')
     entries = []
-    csvFile = pandas.read_csv(csv_file_name,usecols=["gcp_file","id","url","annotation_output","gcp_output","ignore"],skip_blank_lines=True)
-    # Create a Graph
-    #from rdflib.namespace import _FOAF , _XSD
-    #from rdflib import Namespace
-    #JSONLD = Namespace("http://www.w3.org/ns/anno.jsonld")
-    #g = Graph()
-    #bn = BNode()
-    #g.add((bn, URIRef('type'), Literal("AnnotationPage")))
-    
+    csvFile = pandas.read_csv(csv_file,usecols=["gcp_file","id","url","annotation_output","gcp_output","ignore"],skip_blank_lines=True)
     for _, row in csvFile.iterrows():
         file_name = row['gcp_file']
         id = row['id']
@@ -241,7 +320,7 @@ def createAnnotations(csv_file_name, iiif_version, proj4_string, output_annotati
             logging.warning(f"  Skipping file: {file_name}")
         else: 
             logging.debug(f"  Creating annotation for file: {file_name} with id {id} and url {url} ({output_file_name})")
-            entry = create_annotation(file_name, proj4_string, id, input_mask, output_file_name, url, iiif_image_api_version=iiif_version,gcp_output=gcp_output,tps=tps)
+            entry = create_annotation(file_name = file_name, input_proj4_string = proj4_string, id = id, mask_file = input_mask, mask_attribute = mask_attribute, output_file_name = output_file_name, url = url, iiif_image_api_version=iiif_version,gcp_output=gcp_output,inverse = inverse, tps=tps)
             entries.append(entry)
     items = []
     for entry in entries:
@@ -254,26 +333,28 @@ def createAnnotations(csv_file_name, iiif_version, proj4_string, output_annotati
         ],
         "items": items
     }
-    from pathlib import Path
-    path = Path(output_annotation_file)
-    path.parent.mkdir(parents=True, exist_ok=True) 
-    with open(output_annotation_file, 'w') as output_file:
-        output_file.write(json.dumps(dictionary, indent=2))
+    # from pathlib import Path
+    # path = Path(output_annotation_file)
+    # path.parent.mkdir(parents=True, exist_ok=True) 
+    # with open(output_annotation_file, 'w') as output_file:
+    #     output_file.write(json.dumps(dictionary, indent=2))
+    output_annotation_file.write(json.dumps(dictionary, indent=2))
 
 if __name__ == '__main__':
-    if len( sys.argv ) < 5:
-        print('[ ERROR ]: you must pass at least four arguments -- the csv file argument, the iiif image api version, the proj4_string and the output file')
-        sys.exit( 1 )
+    # if len( sys.argv ) < 5:
+    #     print('[ ERROR ]: you must pass at least four arguments -- the csv file argument, the iiif image api version, the proj4_string and the output file')
+    #     sys.exit( 1 )
 
-    csv_file = sys.argv[1]
-    iiif_image_api_version = int(sys.argv[2])
-    proj4_string = sys.argv[3]
-    output_annotation_file = sys.argv[4]
-    input_mask = None
-    if len( sys.argv ) > 5:
-        input_mask = sys.argv[5]
-    tps = False
-    if len( sys.argv ) > 6:
-        if sys.argv[6] == "tps":
-            tps = True
-    createAnnotations(csv_file_name=csv_file,iiif_version=iiif_image_api_version,proj4_string=proj4_string, output_annotation_file=output_annotation_file, input_mask=input_mask, tps=tps)
+    # csv_file = sys.argv[1]
+    # iiif_image_api_version = int(sys.argv[2])
+    # proj4_string = sys.argv[3]
+    # output_annotation_file = sys.argv[4]
+    # input_mask = None
+    # if len( sys.argv ) > 5:
+    #     input_mask = sys.argv[5]
+    # tps = False
+    # if len( sys.argv ) > 6:
+    #     if sys.argv[6] == "tps":
+    #         tps = True
+    # createAnnotations(csv_file_name=csv_file,iiif_version=iiif_image_api_version,proj4_string=proj4_string, output_annotation_file=output_annotation_file, input_mask=input_mask, tps=tps)
+    createAnnotations()
