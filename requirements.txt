@@ -4,5 +4,6 @@ iiif_prezi3
 fiona
 geopandas
 opencv-python
+gdal
 pikepdf
 
