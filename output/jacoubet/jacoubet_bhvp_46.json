@@ -1,0 +1,108 @@
+{
+  "type": "AnnotationPage",
+  "@context": [
+    "http://www.w3.org/ns/anno.jsonld"
+  ],
+  "items": [
+    {
+      "type": "Annotation",
+      "id": "jacoubet_bhvp_46",
+      "@context": [
+        "http://www.w3.org/ns/anno.jsonld",
+        "http://geojson.org/geojson-ld/geojson-context.jsonld",
+        "http://iiif.io/api/presentation/3/context.json"
+      ],
+      "motivation": "georeferencing",
+      "target": {
+        "type": "Image",
+        "source": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_46._Nomenclature_-_BHVP.jpg/full/max/0/default.jpg",
+        "service": [
+          {
+            "@id": "https://iiif.geohistoricaldata.org/iiif/3/Atlas_de_Jacoubet_-_46._Nomenclature_-_BHVP.jpg",
+            "type": "ImageService1"
+          }
+        ],
+        "selector": {
+          "type": "SvgSelector",
+          "value": "<svg width=\"5859\" height=\"7189\"><polygon points=\"6038,605 229,574 229,574 179,7745 179,7745 5961,7763 5961,7763 6038,605\" /></svg>"
+        }
+      },
+      "body": {
+        "type": "FeatureCollection",
+        "purpose": "gcp-georeferencing",
+        "transformation": {
+          "type": "polynomial",
+          "options": {
+            "order": 2
+          }
+        },
+        "features": [
+          {
+            "type": "Feature",
+            "properties": {
+              "pixelCoords": [
+                229,
+                574
+              ]
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2.282037745069619,
+                48.83634575423631
+              ]
+            }
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "pixelCoords": [
+                179,
+                7745
+              ]
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2.2820499321282015,
+                48.82510540335719
+              ]
+            }
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "pixelCoords": [
+                6038,
+                605
+              ]
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2.2956596382475576,
+                48.83635138738242
+              ]
+            }
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "pixelCoords": [
+                5961,
+                7763
+              ]
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2.2956687785440684,
+                48.8251110349324
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

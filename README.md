@@ -88,3 +88,8 @@ from https://www.siv.archives-nationales.culture.gouv.fr/siv/IR/FRAN_IR_057290
 ```shell
 python create_annotations.py --csv_file ~/data/3_V_GEOREFERENCEE_ADRESSES_PARIS_PLAN_CADASTRAL_AN_F31_1_ET_2/cadastre_general_paris.csv --proj4_string "+proj=aeqd +lat_0=48.83635863 +lon_0=2.33652533 +x_0=0 +y_0=0 +ellps=GRS80 +to_meter=1.94903631 +no_defs" --output_annotation_file output/Atlas_general_de_Paris/Atlas_general_de_Paris.json --input_mask ~/data/3_V_GEOREFERENCEE_ADRESSES_PARIS_PLAN_CADASTRAL_AN_F31_1_ET_2/masks.gpkg --mask_attribute MASK --tps --inverse
 ```
+
+## CADASTRE de L'Hay, Archives Départementales 94
+```shell
+python create_annotations.py --csv_file FRAD094_3P.csv --iiif_version 3 --proj4_string "+proj=lcc +lat_0=46.5 +lon_0=3 +lat_1=49 +lat_2=44 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +type=crs" --output_annotation_file output/FRAD094_3P/FRAD094_3P.json --input_mask ./FRAD094_3P/masks.gpkg
+```
